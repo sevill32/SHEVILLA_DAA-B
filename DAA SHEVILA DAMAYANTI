@@ -1,22 +1,3 @@
-import math
-
-# Fungsi untuk menghitung KPK menggunakan FPB
-def hitung_kpk(a, b):
-    # Menggunakan fungsi gcd dari modul math untuk menghitung FPB
-    fpb = math.gcd(a, b)
-    kpk = (a * b) // fpb  # KPK menggunakan rumus a * b / FPB(a, b)
-    return kpk
-
-# Input dari pengguna
-a = int(input("Masukkan bilangan pertama: "))
-b = int(input("Masukkan bilangan kedua: "))
-
-# Menghitung KPK
-kpk = hitung_kpk(a, b)
-
-# Menampilkan hasil
-print(f"KPK dari {a} dan {b} adalah: {kpk}")
-
 1. Mencari KPK dari 3 dan 4
 •	Algoritma:
 1.	Tentukan dua angka, misalnya a = 3 dan b = 4.
@@ -34,33 +15,13 @@ def lcm(a, b):
 print(lcm(3, 4))  # Output KPK dari 3 dan 4
 
 
-# Fungsi untuk menukar posisi dua variabel
-def tukar_posisi(x, y):
-    # Menggunakan variabel sementara (piring 3) untuk membantu menukar
-    piring_kosong = x  # Piring 3 diisi dengan nilai dari piring 1 (x)
-    x = y              # Piring 1 diisi dengan nilai dari piring 2 (y)
-    y = piring_kosong  # Piring 2 diisi dengan nilai dari piring 3 (nilai asli dari x)
-    return x, y
-
-# Kasus: Manggis di piring 1, Pisang di piring 2
-piring1 = "Manggis"
-piring2 = "Pisang"
-
-# Menampilkan posisi sebelum ditukar
-print(f"Sebelum ditukar: Piring 1 = {piring1}, Piring 2 = {piring2}")
-
-# Menukar posisi menggunakan fungsi tukar_posisi
-piring1, piring2 = tukar_posisi(piring1, piring2)
-
-# Menampilkan posisi setelah ditukar
-print(f"Setelah ditukar: Piring 1 = {piring1}, Piring 2 = {piring2}")
-
 2. Menukar Posisi Dua Variabel (Kasus Manggis dan Pisang)
 •	Algoritma:
 1.	Ambil piring ketiga yang kosong.
 2.	Pindahkan manggis dari piring 1 ke piring 3.
 3.	Pindahkan pisang dari piring 2 ke piring 1.
 4.	Pindahkan manggis dari piring 3 ke piring 2.
+
 pseucode
 def swap_fruits():
     piring_1 = "Manggis"
@@ -83,76 +44,35 @@ def swap_fruits():
 
 print(swap_fruits())  # Output: ('Pisang', 'Manggis')
 
-# Fungsi untuk menghitung luas segitiga
-def hitung_luas_segitiga(alas, tinggi):
-    luas = 0.5 * alas * tinggi
-    return luas
-
-# Diketahui alas dan tinggi
-alas = 25
-tinggi = 30
-
-# Menghitung luas
-luas = hitung_luas_segitiga(alas, tinggi)
-
-# Menampilkan hasil
-print(f"Luas segitiga dengan alas {alas} dan tinggi {tinggi} adalah: {luas}")
-
 3. Menghitung Luas Segitiga
 •	Algoritma:
 1.	Diketahui alas = 25, tinggi = 30.
 2.	Gunakan rumus: Luas=12×alas×tinggiLuas=21×alas×tinggi.
+
 pseucode
 def luas_segitiga(alas, tinggi):
     return 0.5 * alas * tinggi
 
 print(luas_segitiga(25, 30))  # Output: 375.0
 
-# Fungsi untuk menghitung luas jajar genjang
-def luas_jajar_genjang(alas, tinggi):
-    return alas * tinggi
-
-# Input dari pengguna
-alas = float(input("Masukkan alas jajar genjang: "))
-tinggi = float(input("Masukkan tinggi jajar genjang: "))
-
-# Menghitung luas
-luas = luas_jajar_genjang(alas, tinggi)
-
-# Menampilkan hasil
-print(f"Luas jajar genjang adalah: {luas}")
 
 4. Luas Jajar Genjang (Panjang = 5, Tinggi = 3)
 •	Algoritma:
 1.	Diketahui panjang = 5, tinggi = 3.
 2.	Gunakan rumus: Luas=panjang×tinggiLuas=panjang×tinggi.
+
 pseucode
 def luas_jajar_genjang(panjang, tinggi):
     return panjang * tinggi
 
 print(luas_jajar_genjang(5, 3))  # Output: 15
 
-import math
-
-# Fungsi untuk menghitung volume tabung
-def hitung_volume_tabung(jari_jari, tinggi):
-    volume = math.pi * jari_jari ** 2 * tinggi
-    return volume
-
-# Input dari pengguna
-jari_jari = float(input("Masukkan jari-jari alas tabung: "))
-tinggi = float(input("Masukkan tinggi tabung: "))
-
-# Menghitung volume
-volume = hitung_volume_tabung(jari_jari, tinggi)
-
-# Menampilkan hasil
-print(f"Volume tabung dengan jari-jari {jari_jari} dan tinggi {tinggi} adalah: {volume:.2f}")
 
 5. Volume Tabung (Jari-jari = 3, Tinggi = 5)
 o	Algoritma:
 1.	Diketahui jari-jari = 3, tinggi = 5.
 2.	Gunakan rumus: Volume=π×jari-jari2×tinggiVolume=π×jari-jari2×tinggi.
+
 pseucode
 import math
 
@@ -161,27 +81,12 @@ def volume_tabung(jari_jari, tinggi):
 
 print(volume_tabung(3, 5))  # Output: 141.37 (approx)
 
-# Fungsi untuk menghitung volume kerucut dari diameter
-def hitung_volume_kerucut_dari_diameter(diameter, tinggi):
-    jari_jari = diameter / 2
-# Menghitung jari-jari dari diameter
-    volume = (1/3) * math.pi * jari_jari ** 2 * tinggi
-    return volume
-
-# Input dari pengguna
-diameter = float(input("Masukkan diameter alas kerucut: "))
-tinggi = float(input("Masukkan tinggi kerucut: "))
-
-# Menghitung volume
-volume = hitung_volume_kerucut_dari_diameter(diameter, tinggi)
-
-# Menampilkan hasil
-print(f"Volume kerucut dengan diameter {diameter} dan tinggi {tinggi} adalah: {volume:.2f}")
 
 6. Volume Kerucut (Diameter = 5, Tinggi = 4)
 o	Algoritma:
 1.	Diketahui diameter = 5, tinggi = 4. Maka jari-jari r=diameter2=2.5r=2diameter=2.5.
 2.	Gunakan rumus: Volume=13×π×jari-jari2×tinggiVolume=31×π×jari-jari2×tinggi.
+
 pseucode
 import math
 
