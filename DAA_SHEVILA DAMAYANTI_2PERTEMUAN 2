@@ -1,0 +1,119 @@
+import numpy as np
+
+# membuat array
+nilai_siswa = np.array([85, 55, 40, 90])
+
+# mengakses data pada array
+print(nilai_siswa[3])
+
+print("Hello World")
+isi_nama = str(input("Nama saya "))
+isi_nim = int(input("NIM saya "))
+
+if 5>2:
+  print("Five is greater than two!")
+
+x = 5
+y = "Jhon"
+print(x)
+print(y)
+
+x = 4
+x = "Sally"
+print(x)
+
+def getFirst(myList):
+  return(myList[0])
+getFirst(myList=[1,2,3])
+
+def getSecond(myList):
+  return(myList[1])
+getSecond(myList=[1,2,3,4,5,6,7,8,9])
+
+def getLast(myList):
+  return(myList[8])
+getLast(myList=[1,2,3,4,5,6,7,8,9])
+
+def getSum(myList):
+  sum = 0
+  for item in myList:
+    sum = sum+item
+  return sum
+getSum(myList=[1,2,3,4])
+
+def getProduct(myList):
+  kali = 1
+  for item in myList:
+    kali = kali*item
+  return kali
+getProduct(myList=[1,2,3,4])
+
+def getQuotient(myList):
+  bagi = 1
+  for item in myList:
+    bagi = bagi/item
+  return bagi
+getQuotient(myList=[1,2,3,4])
+
+import random
+
+# Fungsi untuk membagi himpunan menjadi 2
+def splitSet(himpunan):
+    # Convert to list for easier manipulation
+    himpunan_list = list(himpunan)
+
+    # Shuffle the list for randomness
+    random.shuffle(himpunan_list)
+
+    # Calculate mid point
+    mid_index = len(himpunan_list) // 2
+
+    # Split into two sets
+    set1 = set(himpunan_list[:mid_index])
+    set2 = set(himpunan_list[mid_index:])
+
+    return set1, set2
+
+# Fungsi untuk menjumlahkan elemen-elemen dalam himpunan
+def getSum(himpunan):
+    return sum(himpunan)
+
+# Himpunan angka
+himpunan = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+# Membagi himpunan
+set1, set2 = splitSet(himpunan)
+
+# Menampilkan hasil pembagian
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+# Menggunakan getSum untuk menjumlahkan elemen-elemen dalam set
+print("Jumlah Set 1:", getSum(set1))
+print("Jumlah Set 2:", getSum(set2))
+
+# Fungsi untuk menjumlahkan angka dalam himpunan
+def getSum(himpunan):
+    return sum(himpunan)
+
+# Fungsi untuk mengurangi dua himpunan angka
+def subtractSets(set1, set2):
+    # Menghitung jumlah masing-masing himpunan
+    sum_set1 = getSum(set1)
+    sum_set2 = getSum(set2)
+
+    # Mengurangi jumlah himpunan pertama dengan himpunan kedua
+    result = sum_set1 - sum_set2
+    return result
+
+# Contoh penggunaan:
+set1 = {10, 20, 30}
+set2 = {5, 15}
+
+# Mengurangi set1 dengan set2
+hasil = subtractSets(set1, set2)
+
+# Menampilkan hasil
+print("Jumlah Set 1:", getSum(set1))  # Output: 60
+print("Jumlah Set 2:", getSum(set2))  # Output: 20
+print("Hasil Pengurangan Set 1 - Set 2:", hasil)  # Output: 40
